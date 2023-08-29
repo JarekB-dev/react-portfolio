@@ -2,13 +2,21 @@ import { Container, Row, Col, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCards";
 import { TabContainer, TabContent, TabPane } from "react-bootstrap";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import projImg1 from "../assets/img/project-img1.png";
+import projImg2 from "../assets/img/project-img2.png";
+import projImg3 from "../assets/img/project-img3.png";
 
 export const Projects = () => {
 	const projects = [
 		{
 			title: "Business Startup",
 			description: "A business startup that is looking to grow into a large company.",
-			imgUrl: projImg3,
+			imgUrl: projImg1,
+		},
+		{
+			title: "Business Startup",
+			description: "A business startup that is looking to grow into a large company.",
+			imgUrl: projImg2,
 		},
 		{
 			title: "Business Startup",
@@ -18,17 +26,12 @@ export const Projects = () => {
 		{
 			title: "Business Startup",
 			description: "A business startup that is looking to grow into a large company.",
-			imgUrl: projImg3,
+			imgUrl: projImg1,
 		},
 		{
 			title: "Business Startup",
 			description: "A business startup that is looking to grow into a large company.",
-			imgUrl: projImg3,
-		},
-		{
-			title: "Business Startup",
-			description: "A business startup that is looking to grow into a large company.",
-			imgUrl: projImg3,
+			imgUrl: projImg2,
 		},
 		{
 			title: "Business Startup",
@@ -45,7 +48,7 @@ export const Projects = () => {
 						<h2>Projects</h2>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
 						<TabContainer id="projects-tab" defaultActiveKey="first">
-							<Nav variant="pills" defaultActiveKey="/home">
+							<Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
 								<Nav.Item>
 									<Nav.Link eventKey="first">Tab One</Nav.Link>
 								</Nav.Item>
