@@ -22,7 +22,28 @@ export const Contact = () => {
 		});
 	};
 
-	const handleSubmit = () => {};
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		setButtonText("Sending...");
+		let response = await fetch("http://localhost:5000/contact", {
+			method: "POST",
+			headers: {
+				"Content-Type": "Application/json;charset=utf-8",
+			},
+			body: JSON.stringify(formDetails),
+		});
+		setButtonText("Send Message");
+		let result = response.json();
+		setFormDetails(formInitialDetails);
+		if (result.code === 200) {
+			setStatus({
+				success: true,
+				status: "Message Sent",
+			});
+		} else {
+			setStatus({ success: false, message: "Something went wrong, please try again." });
+		}
+	};
 
 	return (
 		<section className="contact">
