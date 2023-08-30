@@ -1,7 +1,7 @@
-import { Alert, Col, Row } from "react-bootstrap";
 import { useState, useEffect } from "react";
+import { Col, Row, Alert } from "react-bootstrap";
 
-export const Newsletter = ({ onValidated, status, message }) => {
+export const Newsletter = ({ status, message, onValidated }) => {
 	const [email, setEmail] = useState("");
 
 	useEffect(() => {
@@ -10,7 +10,11 @@ export const Newsletter = ({ onValidated, status, message }) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		email && email.indexOf("@") > -1 && onValidated({ EMAIL: email });
+		email &&
+			email.indexOf("@") > -1 &&
+			onValidated({
+				EMAIL: email,
+			});
 	};
 
 	const clearFields = () => {
@@ -19,10 +23,12 @@ export const Newsletter = ({ onValidated, status, message }) => {
 
 	return (
 		<Col lg={12}>
-			<div className="newsletter-bx">
+			<div className="newsletter-bx wow slideInUp">
 				<Row>
 					<Col lg={12} md={6} xl={5}>
-						<h3>Subscribe to my Newsletter</h3>
+						<h3>
+							Subscribe to our Newsletter<br></br> & Never miss latest updates
+						</h3>
 						{status === "sending" && <Alert>Sending...</Alert>}
 						{status === "error" && <Alert variant="danger">{message}</Alert>}
 						{status === "success" && <Alert variant="success">{message}</Alert>}
@@ -31,7 +37,7 @@ export const Newsletter = ({ onValidated, status, message }) => {
 						<form onSubmit={handleSubmit}>
 							<div className="new-email-bx">
 								<input value={email} type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email Address" />
-								<button type="submit">Subscribe</button>
+								<button type="submit">Submit</button>
 							</div>
 						</form>
 					</Col>
