@@ -63,7 +63,7 @@ export const Contact = () => {
 										id="firstName"
 										placeholder="First Name"
 										value={formDetails.firstName}
-										onChange={(e) => onFormUpdate("firstName, e.target.value")}
+										onChange={(e) => onFormUpdate("firstName", e.target.value)}
 									/>
 								</Col>
 								<Col sm={6} className="px-1">
@@ -73,7 +73,7 @@ export const Contact = () => {
 										id="firstName"
 										placeholder="Last Name"
 										value={formDetails.lastName}
-										onChange={(e) => onFormUpdate("lastName, e.target.value")}
+										onChange={(e) => onFormUpdate("lastName", e.target.value)}
 									/>
 								</Col>
 								<Col sm={6} className="px-1">
@@ -83,7 +83,7 @@ export const Contact = () => {
 										id="firstName"
 										placeholder="Email Address"
 										value={formDetails.email}
-										onChange={(e) => onFormUpdate("email, e.target.value")}
+										onChange={(e) => onFormUpdate("email", e.target.value)}
 									/>
 								</Col>
 								<Col sm={6} className="px-1">
@@ -93,7 +93,7 @@ export const Contact = () => {
 										id="firstName"
 										placeholder="Phone Number"
 										value={formDetails.phone}
-										onChange={(e) => onFormUpdate("phone, e.target.value")}
+										onChange={(e) => onFormUpdate("phone", e.target.value)}
 									/>
 								</Col>
 								<Col>
@@ -102,7 +102,7 @@ export const Contact = () => {
 										id="message"
 										placeholder="Message"
 										value={formDetails.message}
-										onChange={(e) => onFormUpdate("message, e.target.value")}
+										onChange={(e) => onFormUpdate("message", e.target.value)}
 									/>
 									<button type="submit">
 										<span>{buttonText}</span>
