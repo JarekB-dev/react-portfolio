@@ -266,7 +266,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner button {
-  background-color: #1212121c;
+  background-color: transparent;
+  border: none;
   color: #fff;
   font-weight: 700;
   font-size: 20px;
@@ -528,8 +529,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.2em;
   text-align: center;
 }
-
-animate__slideInRight
 
 .new-email-bx {
   background: #fff;
